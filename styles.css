@@ -4,16 +4,67 @@ body {
   transition: background 0.3s, color 0.3s;
 }
 
-ul {
-  margin: 0;
-  padding: 0;
+/* Theme Classes */
+.theme-light {
+    background-color: white;
+    color: black;
 }
 
-li {
-  list-style-type: none;
+.theme-dark {
+    background-color: black;
+    color: white;
+}
+
+.theme-visual-dark {
+    background-color: rgba(30, 30, 30, 1);
+    color: rgba(212, 212, 212, 1);
+}
+
+.theme-abyss {
+    background-color: rgba(0, 12, 24, 1);
+    color: rgba(180, 196, 211, 1);
 }
 
 #status {
+  position: fixed;
+  left: 300px;
   text-align: center;
   min-height: 20px;
+  z-index: 1000;
+}
+
+button {
+  display: block;
+  margin: 30px 40px;
+  padding: 10px 5px;
+  background-color: rgb(19, 118, 131);
+  border: none;
+  border-radius: 5px;
+  color: rgb(253, 253, 252);
+  font-weight: bold;
+}
+
+ul{
+  margin: 30px 40px;
+  max-width: 200px;
+  background-color: white;
+  padding: 10px 5px;
+}
+
+[role="menuitem"]{
+  list-style-type: none;
+  color: black;
+  padding: 10px 0;
+  font-size: 1.2rem;
+}
+
+[role="menuitem"]:hover{
+  background-color: rgb(238, 240, 241);
+}
+
+/* Use the theme's text color for the button border/text if you want */
+.theme-visual-dark button, .theme-abyss button {
+    border: 1px solid currentColor;
+    background: transparent;
+    color: inherit;
 }

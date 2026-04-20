@@ -7,7 +7,16 @@
   <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
-
+    <button id="theme-switcher-button" aria-haspopup="true" aria-expanded="false" aria-controls="theme-dropdown">
+        Switch Theme
+    </button>
+    <h2 aria-live="polite" id="status"></h2>
+    <ul id="theme-dropdown" role="menu" aria-labelledby="theme-switcher-button" hidden>
+        <li role="menuitem" id="theme-light">Light</li>
+        <li role="menuitem" id="theme-dark">Dark</li>
+        <li role="menuitem" id="theme-visual-dark">Visual-Dark</li>
+        <li role="menuitem" id="theme-abyss">Abyss</li>
+    </ul>
   <script src="./script.js"></script>
 </body>
 </html>
